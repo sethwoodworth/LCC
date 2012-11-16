@@ -1,0 +1,48 @@
+
+codes = {
+'classes': {
+     'V': {'desc': 'NAVAL SCIENCE', 
+         'subclasses': [
+                 'V': {    'desc': 'Naval science (General)', 
+                           'topics': [
+                                 {'start': 25, 'stop': 55, 'desc': 'History and antiquities of naval science'), 
+                                 {'start': 66, 'stop': 69, 'desc': 'Navy clubs')
+                            ]
+                        },
+                'VA': { 'desc':  'Navies: Organization, distribution, naval situation',
+                        'start': 10,
+                        'end': 750
+                        'topics': [
+                            {'start': 49, 'stop': 395, 'desc': 'United States'},
+                            {'start': 400, 'stop': 750, 'desc': 'Other regions or countries'}
+                        ]}
+        ]
+        }
+}
+
+code = 'VA52'
+
+class = code[0]
+if code[1] in string.uppercaseletters:
+    subclass = code[0:2]
+    code_number = code[2:]
+else:
+    subclass = class
+    code_number = code[1:]
+
+def parse_code(codes, code, class, subclass, code_number)
+    start = codes['classes'][class]["subclasses"][subclass]['start']
+    end = codes[class]["subclasses"][subclass]['end']
+    assert start <= code_number <= end
+    for range in codes['classes'][class]["subclasses"][subclass]['topics']:
+
+        if range[0] <= b < range[1]:
+            return range[2] #returns  'United States'
+
+for i,j in enumerate(code):
+    print i, j, code
+    print code[:i]
+    if i == len(code) and code[i+1].isdigit():
+        subclass = code[:i-1]
+        number = code[i-1:]
+
