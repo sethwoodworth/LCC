@@ -1,8 +1,7 @@
-
 codes = {
-'classes': {
+  'classes': {
      'V': {'desc': 'NAVAL SCIENCE', 
-         'subclasses': [
+         'subclasses': {
                  'V': {    'desc': 'Naval science (General)', 
                            'topics': [
                                  {'start': 25, 'stop': 55, 'desc': 'History and antiquities of naval science'), 
@@ -16,8 +15,8 @@ codes = {
                             {'start': 49, 'stop': 395, 'desc': 'United States'},
                             {'start': 400, 'stop': 750, 'desc': 'Other regions or countries'}
                         ]}
-        ]
-        }
+         }
+  }
 }
 
 code = 'VA52'
